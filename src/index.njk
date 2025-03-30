@@ -10,4 +10,20 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  {% for blog in blog.blogs %}
+  <div class="row justify-content-center">
+    <div class="col col-sm-12 col-md-9 col-lg-9">  
+      <h3> 
+        <a href="blog/{{ blog.slug }}.html"> {{ blog.headline }}</a> 
+      </h3>
+      <p> {{ blog.date }} </p>
+      <hr>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
 {% endblock %}
